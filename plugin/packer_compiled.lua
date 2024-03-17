@@ -158,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["virt-column.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/virt-column.nvim",
+    url = "https://github.com/lukas-reineke/virt-column.nvim"
   }
 }
 

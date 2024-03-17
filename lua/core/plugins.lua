@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
     tag = "*",
     requires = 'nvim-tree/nvim-web-devicons'
   }
+  use 'lukas-reineke/virt-column.nvim'
 
   -- Completition and LSP
   use {
