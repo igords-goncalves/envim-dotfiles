@@ -42,6 +42,10 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+  use {
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+  }
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use({
@@ -53,6 +57,9 @@ return require('packer').startup(function(use)
   use "rafamadriz/friendly-snippets"
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- git and markers
+  use "lewis6991/gitsigns.nvim"
+  use "dinhhuy258/git.nvim"
   -----------------------------------------------
   if packer_bootstrap then
     require('packer').sync()
