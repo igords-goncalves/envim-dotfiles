@@ -5,7 +5,6 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.autoindent = true
-vim.opt.cmdheight = 2
+vim.opt.cmdheight = 1
 vim.opt.ai = true
 vim.opt.si = true
-
