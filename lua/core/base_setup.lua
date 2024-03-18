@@ -8,3 +8,4 @@ vim.opt.autoindent = true
 vim.opt.cmdheight = 1
 vim.opt.ai = true
 vim.opt.si = true
+vim.opt.wrap = false
