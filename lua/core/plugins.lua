@@ -71,6 +71,12 @@ return require('packer').startup(function(use)
     event = "InsertEnter",
   }
 
+  use {
+    '0x100101/lab.nvim',
+    run = 'cd js && npm ci',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+
   -----------------------------------------------
   if packer_bootstrap then
     require('packer').sync()
