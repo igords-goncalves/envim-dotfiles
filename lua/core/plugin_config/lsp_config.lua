@@ -1,5 +1,11 @@
+local lspconfig = require('lspconfig')
+
 require("mason").setup()
+
 require("mason-lspconfig").setup {
+  -- @see https://www.reddit.com/r/neovim/comments/15k3l88/whats_the_purpose_of_masonlspconfig/
+  -- Predefined list of server
+  ---@type string[]
   ensure_installed = {
     "lua_ls",
     "html",
@@ -14,27 +20,73 @@ require("mason-lspconfig").setup {
   }
 }
 
-local on_atach = function(_, _)
-  --keymaps
-end
-
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-require("lspconfig").lua_ls.setup {
+-- Fixed bug in vim
+lspconfig.lua_ls.setup {
   on_atach = on_atach,
   capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
-        globals = {"vim"},
+        globals = { "vim" },
       }
     }
   }
 
 }
 
-require("lspconfig").html.setup {}
+-- Front-end developement
+lspconfig.tsserver.setup {
+  capabilities = capabilities
+}
+lspconfig.cssls.setup {
+  capabilities = capabilities
+}
+lspconfig.tailwindcss.setup {
+  capabilities = capabilities
+}
+lspconfig.jsonls.setup {
+  capabilities = capabilities
+}
+lspconfig.html.setup {
+  capabilities = capabilities
+}
+lspconfig.emmet_ls.setup {
+  capabilities = capabilities
+}
 
-require("lspconfig").cssls.setup {}
+-- Keymapins
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    -- Enable completion triggered by <c-x><c-o>
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-require("lspconfig").tsserver.setup {}
+    -- Buffer local mappings.
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+
+    -- Shows current path
+    vim.keymap.set('n', '<space>wl', function()
+      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, opts)
+
+    -- Open buffs
+    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+
+    vim.keymap.set('n', '<space>f', function()
+      vim.lsp.buf.format { async = true }
+    end, opts)
+  end,
+})

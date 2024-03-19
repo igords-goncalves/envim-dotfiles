@@ -3,17 +3,6 @@ local cmp = require("cmp")
 require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
- -- Keymapins 
-  mapping = cmp.mapping.preset.insert({
-    ['<C-a>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    -- @see https://github.com/hrsh7th/nvim-cmp/issues/1745
-    ['C-Space'] = cmp.mapping.open_docs(),
-    ['<Esc>'] = cmp.mapping.close_docs(),
-    ['<C-o'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  }),
   snippet = {
     expand = function(args)
      require('luasnip').lsp_expand(args.body)
@@ -24,6 +13,15 @@ cmp.setup({
     {name = 'luasnip'},
   }, {
     {name = 'buffer'}
+  }),
+
+  -- Keymapins 
+  mapping = cmp.mapping.preset.insert({
+    ['<C-a>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-<Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   })
 })
 
