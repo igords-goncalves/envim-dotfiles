@@ -114,13 +114,6 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lspsaga.nvim"] = {
-    load_after = {},
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim",
-    url = "https://github.com/nvimdev/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -140,6 +133,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -189,11 +189,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Load plugins in order defined by `after`
-time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-lspconfig ]]
-vim.cmd [[ packadd lspsaga.nvim ]]
-time([[Sequenced loading]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
