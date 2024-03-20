@@ -77,6 +77,12 @@ return require('packer').startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' }
   }
 
+  use "Djancyp/better-comments.nvim" -- TODO: It's not working remove it
+  use {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  }
+
   -----------------------------------------------
   if packer_bootstrap then
     require('packer').sync()
