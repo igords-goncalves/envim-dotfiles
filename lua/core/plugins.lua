@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
   }
   use 'lukas-reineke/virt-column.nvim'
   use 'shaunsingh/nord.nvim'
+  use { "catppuccin/nvim", as = "catppuccin"}
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use {
