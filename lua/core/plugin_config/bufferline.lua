@@ -1,6 +1,6 @@
 vim.opt.termguicolors = true
-vim.keymap.set('n', '<s-l>', ':bp<CR>')
-vim.keymap.set('n', '<s-h>', ':bn<CR>')
+vim.keymap.set('n', '<s-h>', ':bp<CR>')
+vim.keymap.set('n', '<s-l>', ':bn<CR>')
 vim.keymap.set('n', '<leader>b', ':bd<CR>')
 
 local bufferline = require("bufferline")
