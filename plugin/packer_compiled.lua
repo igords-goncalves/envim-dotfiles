@@ -79,15 +79,15 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["better-comments.nvim"] = {
-    loaded = true,
-    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
-    url = "https://github.com/Djancyp/better-comments.nvim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -98,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["error-lens.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/error-lens.nvim",
+    url = "https://github.com/chikko80/error-lens.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["import-cost.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/import-cost.nvim",
+    url = "https://github.com/barrett-ruth/import-cost.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -156,6 +166,11 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-highlight-colors"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
+    url = "https://github.com/brenoprata10/nvim-highlight-colors"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -190,6 +205,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
   },
   ["virt-column.nvim"] = {
     loaded = true,
