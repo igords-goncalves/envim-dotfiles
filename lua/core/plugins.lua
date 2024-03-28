@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
   }
   use 'lukas-reineke/virt-column.nvim'
   use 'shaunsingh/nord.nvim'
-  use { "catppuccin/nvim", as = "catppuccin"}
+  use { "catppuccin/nvim", as = "catppuccin" }
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use {
@@ -78,10 +78,17 @@ return require('packer').startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' }
   }
 
-  use "Djancyp/better-comments.nvim" -- TODO: It's not working remove it
   use {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+  }
+
+  use "brenoprata10/nvim-highlight-colors"
+
+  -- Linting and Formatting
+  use {
+    'chikko80/error-lens.nvim',
+    requires = { 'nvim-telescope/telescope.nvim' }
   }
 
   -----------------------------------------------

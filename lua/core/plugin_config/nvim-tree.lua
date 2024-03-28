@@ -5,6 +5,9 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = false,
   },
+  diagnostics = {
+    enable = true
+  },
   git = {
     enable = true,
     ignore = false,
