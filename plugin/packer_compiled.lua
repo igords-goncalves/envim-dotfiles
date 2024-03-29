@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["import-cost.nvim"] = {
-    loaded = true,
-    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/import-cost.nvim",
-    url = "https://github.com/barrett-ruth/import-cost.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
