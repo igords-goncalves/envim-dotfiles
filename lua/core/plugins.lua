@@ -91,6 +91,11 @@ return require('packer').startup(function(use)
     requires = { 'nvim-telescope/telescope.nvim' }
   }
 
+  use {
+    'nvimtools/none-ls.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+
   -----------------------------------------------
   if packer_bootstrap then
     require('packer').sync()
