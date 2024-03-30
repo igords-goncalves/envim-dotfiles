@@ -117,7 +117,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
-		-- Formatting now by the LSP language formatter
+		-- Formatting now by the formatters
 		--		 vim.keymap.set('n', '<leader>lf', function()
 		--	      vim.lsp.buf.format { async = true }
 		--	    end, opts)
