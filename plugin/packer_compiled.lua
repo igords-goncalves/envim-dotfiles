@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/error-lens.nvim",
     url = "https://github.com/chikko80/error-lens.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -144,11 +149,6 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["none-ls.nvim"] = {
-    loaded = true,
-    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
-    url = "https://github.com/nvimtools/none-ls.nvim"
-  },
   ["nord.nvim"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nord.nvim",
@@ -170,6 +170,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
     url = "https://github.com/brenoprata10/nvim-highlight-colors"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
