@@ -42,6 +42,11 @@ require("formatter").setup {
       require("formatter.filetypes.cpp").clangformat
     },
 
+    -- Python
+    python = {
+      require("formatter.filetypes.python").black
+    },
+
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace
     }
