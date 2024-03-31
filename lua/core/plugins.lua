@@ -40,6 +40,11 @@ return require("packer").startup(function(use)
 			opt = true,
 		},
 	})
+	use({
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 
 	-- LSP and DAP
 	use({

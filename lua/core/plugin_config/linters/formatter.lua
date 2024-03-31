@@ -28,7 +28,8 @@ require("formatter").setup {
 
     -- Web development
     javascript = {
-      require("formatter.filetypes.javascript").prettier
+      require("formatter.filetypes.javascript").prettier,
+      require("formatter.filetypes.javascript").standardjs
     },
     typescript = {
       require("formatter.filetypes.javascript").prettier
