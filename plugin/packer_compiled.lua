@@ -99,6 +99,13 @@ _G.packer_plugins = {
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dashboard-nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
+    url = "https://github.com/nvimdev/dashboard-nvim"
+  },
   ["error-lens.nvim"] = {
     loaded = true,
     path = "/home/igorgoncalves/.local/share/nvim/site/pack/packer/start/error-lens.nvim",
@@ -228,6 +235,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
