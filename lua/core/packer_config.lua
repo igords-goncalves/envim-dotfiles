@@ -40,11 +40,6 @@ return require("packer").startup(function(use)
 			opt = true,
 		},
 	})
-	use({
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 
 	-- LSP and DAP
 	use({
@@ -75,12 +70,6 @@ return require("packer").startup(function(use)
 	use({
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-	})
-
-	use({
-		"0x100101/lab.nvim",
-		run = "cd js && npm ci",
-		requires = { "nvim-lua/plenary.nvim" },
 	})
 
 	use({

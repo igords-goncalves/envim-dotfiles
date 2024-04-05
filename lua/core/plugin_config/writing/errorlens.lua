@@ -1,1 +1,1 @@
-require("error-lens").setup({})
+require("error-lens").setup()

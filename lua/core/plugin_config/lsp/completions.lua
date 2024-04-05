@@ -1,4 +1,7 @@
 local cmp = require("cmp")
+local luasnip = require("luasnip")
+
+luasnip.filetype_extend("javascriptreact", {"html"})
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -14,6 +17,8 @@ cmp.setup({
   }, {
     {name = 'buffer'}
   }),
+
+
 
   -- Keymapins 
   mapping = cmp.mapping.preset.insert({
